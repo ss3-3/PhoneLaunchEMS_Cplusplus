@@ -881,6 +881,11 @@ string getValidEventStatus(const string& prompt) {
     }
 }
 
+// Validate feedback rating input
+int getValidRating(const string& prompt) {
+    return getValidIntegerInput(prompt + " [1-5]: ", 1, 5);
+}
+
 //exit or back to main menu information
 void confirmExit() {
     cout << " === REGISTRATION CANCELLED ===" << endl;

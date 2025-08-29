@@ -128,6 +128,7 @@
     <ClCompile Include="event_booking.cpp" />
     <ClCompile Include="event_monitoring.cpp" />
     <ClCompile Include="event_registration.cpp" />
+    <ClCompile Include="feedback.cpp" />
     <ClCompile Include="file_operation.cpp" />
     <ClCompile Include="input_validation.cpp" />
     <ClCompile Include="logistics.cpp" />
@@ -141,6 +142,7 @@
     <ClInclude Include="event_monitoring.h" />
     <ClInclude Include="event_registration.h" />
     <ClInclude Include="event_booking.h" />
+    <ClInclude Include="feedback.h" />
     <ClInclude Include="file_operation.h" />
     <ClInclude Include="input_validation.h" />
     <ClInclude Include="logistics.h" />

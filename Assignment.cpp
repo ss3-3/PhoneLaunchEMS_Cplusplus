@@ -18,6 +18,7 @@
 #include "utility_fun.h"
 #include "input_validation.h"
 #include "file_operation.h"
+#include "feedback.h"
 using namespace std;
 
 // Main function
@@ -34,10 +35,11 @@ int main() {
         cout << "2. Event Booking on date, venue and logistics" << endl;
         cout << "3. Event Monotoring" << endl;
         cout << "4. Event Payment" << endl;
-        cout << "5. Save Data & Exit" << endl;
+        cout << "5. Feedback" << endl;
+        cout << "6. Save Data & Exit" << endl;
         cout << setfill('=') << setw(50) << "=" << setfill(' ') << endl;
 
-        int choice = getValidIntegerInput("Enter your choice [1-5]: ", 1, 5);
+        int choice = getValidIntegerInput("Enter your choice [1-6]: ", 1, 6);
 
         switch (choice) {
         case 1:
@@ -53,6 +55,9 @@ int main() {
             //eventPayment;
             break;
         case 5:
+            feedbackMenu(data);
+            break;
+        case 6:
             saveDataToFiles(data);
             exitProgram = true;
             cout << "Thank you for using the Phone Event Management System!" << endl;
