@@ -48,6 +48,9 @@
     <ClCompile Include="logistics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="event_monitoring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="event_registration.h">
@@ -81,6 +84,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="logistics.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="event_monitoring.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

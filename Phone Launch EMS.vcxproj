@@ -126,6 +126,7 @@
     <ClCompile Include="Assignment.cpp" />
     <ClCompile Include="date.cpp" />
     <ClCompile Include="event_booking.cpp" />
+    <ClCompile Include="event_monitoring.cpp" />
     <ClCompile Include="event_registration.cpp" />
     <ClCompile Include="file_operation.cpp" />
     <ClCompile Include="input_validation.cpp" />
@@ -137,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="date.h" />
+    <ClInclude Include="event_monitoring.h" />
     <ClInclude Include="event_registration.h" />
     <ClInclude Include="event_booking.h" />
     <ClInclude Include="file_operation.h" />
