@@ -11,6 +11,7 @@
 #include "venue.h"
 #include "event_registration.h"
 #include "event_booking.h"
+#include "event_monitoring.h"
 #include "system_data.h"
 #include "timeslot.h"
 #include "product.h"
@@ -46,7 +47,7 @@ int main() {
             eventBookingMenu(data);
             break;
         case 3:
-            //eventMonitoring;
+            eventMonitoringMenu(data);
             break;
         case 4:
             //eventPayment;
