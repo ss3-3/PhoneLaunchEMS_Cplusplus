@@ -246,7 +246,7 @@ void updateEventBooking(SystemData& data) {
     viewEventBookings(data);
 
     string bookingID = getValidStringInput("\nEnter Booking ID to update: ");
-
+    bookingID = toUpperCase(bookingID);
     // Find booking using loop
     int bookingIndex = -1;
     for (size_t i = 0; i < data.bookings.size(); i++) {
@@ -281,9 +281,17 @@ void updateEventBooking(SystemData& data) {
 
     switch (choice) {
     case 1:
-        cout << "Status options: Pending, Confirmed, Completed, Cancelled" << endl;
-        data.bookings[bookingIndex].bookingStatus = getValidStringInput("Enter new Status: ");
+    {
+        cout << "Status options: [1]Pending, [2]Confirmed, [3]Completed, [4]Cancelled" << endl;
+        int status = getValidIntegerInput("Enter choice [1-4]: ", 1, 4);
+        switch (status) {
+        case 1: data.bookings[bookingIndex].bookingStatus = "Pending"; break;
+        case 2: data.bookings[bookingIndex].bookingStatus = "Confirmed"; break;
+        case 3: data.bookings[bookingIndex].bookingStatus = "Completed"; break;
+        case 4: data.bookings[bookingIndex].bookingStatus = "Cancelled"; break;
+        }
         break;
+    }
     case 2:
         data.bookings[bookingIndex].finalCost = getValidDoubleInput("Enter new Final Cost (RM): ");
         break;
@@ -318,6 +326,7 @@ void cancelEventBooking(SystemData& data) {
     viewEventBookings(data);
 
     string bookingID = getValidStringInput("\nEnter Booking ID to cancel: ");
+    bookingID = toUpperCase(bookingID);
 
     // Find booking using loop
     int bookingIndex = -1;
